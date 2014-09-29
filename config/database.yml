@@ -1,0 +1,10 @@
+default: &default
+  adapter: postgresql
+
+development:
+  <<: *default
+  database: tumblo_development
+
+test:
+  <<: *default
+  database: tumblo_test
