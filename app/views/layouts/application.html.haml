@@ -31,7 +31,7 @@
 
   .navbar.navbar-fixed-bottom
     - flash.each do |key, value|
-      %div{:class=>"alert-#{key} alert-dismissable alert"}
+      %div{:class=>"alert-#{key} alert-dismiss"}
         %button.close{:type=>"button","data-dismiss"=>"alert", "aria-hidden"=>"true"}
         = value
 
