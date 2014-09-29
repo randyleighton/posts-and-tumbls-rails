@@ -1,5 +1,6 @@
+= link_to "New Post", new_post_path, class: "btn btn-primary"
+
 %h2 All Posts
 - @posts.each do |post|
   = post.title
   = post.body
-= link_to "New Post", new_post_path
