@@ -6,30 +6,32 @@
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
   = csrf_meta_tags
 %body
-  %nav.navbar.navbar-default
-    .navbar-header
-      %button.navbar-toggle{"data-toggle"=>"collapse","data-target"=>".navbar-responsive-collapse", :type =>"button"}
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      .navbar-brand Posts and Tumbls
-    .navbar-collapse.collapse.navbar-responsive-collapse
-      .nav.navbar-nav.navbar-right
-        - if user_signed_in?
-          .nav-format
-            Logged in as
-            = current_user.name
-          .nav-format= link_to "Edit Profile", edit_user_registration_path
-          .nav-format= link_to "Log Out", destroy_user_session_path, method: :delete
-        - else
-          .nav-format= link_to "Create Account", new_user_registration_path
-          .nav-format= link_to "Log In", new_user_session_path
-        .nav-format= link_to "Home", root_path
-  .yield_body.clearfix
-    =yield
+  %div.container-fluid
+    %nav.navbar.navbar-default
+      .navbar-header
+        %button.navbar-toggle{"data-toggle"=>"collapse","data-target"=>".navbar-responsive-collapse", :type =>"button"}
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        .navbar-brand Posts and Tumbls
+      .navbar-collapse.collapse.navbar-responsive-collapse
+        .nav.navbar-nav.navbar-right
+          - if user_signed_in?
+            .nav-format
+              Logged in as
+              = current_user.name
+            .nav-format= link_to "Edit Profile", edit_user_registration_path
+            .nav-format= link_to "Log Out", destroy_user_session_path, method: :delete
+          - else
+            .nav-format= link_to "Create Account", new_user_registration_path
+            .nav-format= link_to "Log In", new_user_session_path
+          .nav-format= link_to "Home", root_path
+    .yield_body.clearfix
+      =yield
 
-.navbar.navbar-default.navbar-fixed-bottom
-  - flash.each do |key, value|
-    %div{:class=>"alert-#{key} alert-dismissable alert"}
-      %button.close{:type=>"button","data-dismiss"=>"alert", "aria-hidden"=>"true"}
-      = value
+  .navbar.navbar-default.navbar-fixed-bottom
+    - flash.each do |key, value|
+      %div{:class=>"alert-#{key} alert-dismissable alert"}
+        %button.close{:type=>"button","data-dismiss"=>"alert", "aria-hidden"=>"true"}
+        = value
+

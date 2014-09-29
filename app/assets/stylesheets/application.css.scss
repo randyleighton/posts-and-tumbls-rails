@@ -20,11 +20,15 @@
 body {
   font-family: 'Lato', sans-serif;
 }
+.container-fluid {
+  padding: 0px;
+}
 .navbar-default .navbar-brand {
   color: #2a6496
 }
 .navbar {
   background-color: #b9d3ee;
+  margin-bottom: 10px;
 }
 .nav-format {
   float: left;
@@ -50,6 +54,7 @@ body {
           box-shadow: 0 1px 2px rgba(0,0,0,.05);
 }
 .border-all-posts {
+  background-color: #b9d3ee;
   border: solid 1px #e7e7e7;
   padding: 5px 10px 5px;
   margin: 0 auto;
@@ -76,18 +81,24 @@ input#user_email, input#user_password, input#user_password_confirmation, input#u
   border-radius: 5px;   */
 }
 .each-post {
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #FFF;
   border-width: 1px;
   border-style: solid;
   border-color: #f2f2f5;
+  border-radius: 3px;
 }
 .each-title {
   font-size: .9em;
-  font-style: italic;
+  font-weight: bold;
 }
 .each-post-body {
   font-size: .8em;
 }
-
+.post-index-head {
+  padding: 0px 20px 10px;
+}
 
 
 
