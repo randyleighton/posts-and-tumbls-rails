@@ -1,6 +1,10 @@
 = link_to "New Post", new_post_path, class: "btn btn-primary"
 
-%h2 All Posts
-- @posts.each do |post|
-  = post.title
-  = post.body
+%div.col-xs-6.border-all-posts
+  %h3 Recent Posts
+  - @posts.each do |post|
+    %div.each-post
+      %div.each-title
+        = post.title
+      %div.each-post-body
+        = post.body
