@@ -1,11 +1,13 @@
 class Blog
 
-  attr_reader :title, :caption, :body
+  attr_reader :title, :caption, :body, :type, :image
 
   def initialize(params)
     @title = params["title"]
     @caption = params["caption"]
     @body = params["body"]
+    @type = params["type"]
+    @image = params["photos"][0]["original_size"]["url"] if params["photos"]
   end
 
   def self.all
@@ -17,7 +19,5 @@ class Blog
     end
     blogs
   end
-
-
 
 end

@@ -8,9 +8,13 @@
   - @blogs.each do |blog|
     %div.each-post
       %div.each-title
-        = blog.title
-        %div.each-body
-          = blog.body
-          %div.each-body
-            = blog.caption
+        = blog.title.to_s.html_safe
+      %div.each-body
+        = blog.body.to_s.html_safe
+      %div
+        = image_tag("#{blog.image.to_s.html_safe}", class: "img img-responsive")
+      %div.each-caption
+        = blog.caption.to_s.html_safe
+
+
 
