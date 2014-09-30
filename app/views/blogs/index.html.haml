@@ -1,8 +1,6 @@
 %div.col-xs-12.post-index-head
   = link_to "Local Posts", posts_path, class: "btn btn-warning"
   %a.btn.btn-primary{href: "https://github.com/tumblr/tumblr_client", target: "_blank"}Tumblr API Gem
-
-
 %div.col-xs-12.col-sm-5.border-all-posts
   %h3 Recent Tumblr Blog Posts
   - @blogs.each do |blog|
@@ -15,6 +13,12 @@
         = image_tag("#{blog.image.to_s.html_safe}", class: "img img-responsive")
       %div.each-caption
         = blog.caption.to_s.html_safe
-
+/ %div.col-sm-2
+/ %div.col-xs-12.col-sm-5.border-all-posts
+  / %h3 Followers
+  / %div.each-post
+  /   %div.each-title
+  /     - @blogs.each do |blog|
+  /       = blog.get_followers.to_s.html_safe
 
 
