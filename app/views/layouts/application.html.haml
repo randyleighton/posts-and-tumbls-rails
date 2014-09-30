@@ -7,6 +7,7 @@
   = csrf_meta_tags
 %body
   %div.container-fluid
+    = video_tag("clouds.mp4", :autoplay=> "true", :muted=>"true", :loop=>"true", class:"bgvideo")
     %nav.navbar.navbar-default
       .navbar-header
         %button.navbar-toggle{"data-toggle"=>"collapse","data-target"=>".navbar-responsive-collapse", :type =>"button"}
