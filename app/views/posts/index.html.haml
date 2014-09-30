@@ -1,5 +1,7 @@
 %div.col-xs-12.post-index-head
-  = link_to "New Post", new_post_path, class: "btn btn-primary"
+  = link_to "New Local Post", new_post_path, class: "btn btn-primary"
+  = link_to "Tumblr Blogs", blogs_path, class: "btn btn-warning"
+  %a.btn.btn-warning{href: "https://github.com/tumblr/tumblr_client", target: "_blank"}Tumblr API Gem
 
 %div.col-xs-12.col-sm-5.border-all-posts
   %h3 Recent Posts
