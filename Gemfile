@@ -13,6 +13,7 @@ gem 'autoprefixer-rails'
 gem 'devise'
 gem 'simple_form'
 gem 'haml'
+gem 'tumblr_client'
 
 group :development do
     gem 'better_errors'
